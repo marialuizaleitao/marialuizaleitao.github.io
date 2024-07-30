@@ -1,9 +1,8 @@
-import React from 'react'
-import { AiFillAppstore } from "react-icons/ai";
-import { FaMobile, FaGlobe } from "react-icons/fa";
-import { SiProgress, SiAntdesign } from "react-icons/si";
-import Title from '../layouts/Title';
-import Card from './Card';
+import React from "react";
+import { FaBusinessTime, FaCode, FaDatabase } from "react-icons/fa";
+import { SiDocker, SiPowerbi, SiProgress } from "react-icons/si";
+import Title from "../layouts/Title";
+import Card from "./Card";
 
 const Features = () => {
   return (
@@ -14,44 +13,38 @@ const Features = () => {
       <Title title="Features" des="What I Do" />
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-20">
         <Card
-          title="Business Stratagy"
-          des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta
-          hic consequuntur eum repellendus ad."
-         
+          title="Backend Development"
+          des="Building robust backend systems using Java Spring, Golang, and Nest.js. Ensuring high performance, scalability, and secure data handling in web applications."
+          icon={<FaCode />}
         />
         <Card
-          title="App Development"
-          des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta
-          hic consequuntur eum repellendus ad."
-          icon={<AiFillAppstore />}
-        />
-        <Card
-          title="SEO Optimisation"
-          des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta
-          hic consequuntur eum repellendus ad."
+          title="Frontend Development"
+          des="Crafting intuitive and responsive user interfaces with React, Angular, TailwindCSS, and Bootstrap. Delivering seamless user experiences across various devices and platforms."
           icon={<SiProgress />}
         />
         <Card
-          title="Mobile Development"
-          des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta
-          hic consequuntur eum repellendus ad."
-          icon={<FaMobile />}
+          title="DevOps"
+          des="Skilled in using Git for version control and managing collaborative development workflows. Experienced in implementing DevOps practices with Docker and CI/CD pipelines to streamline deployment processes and using Linux environments."
+          icon={<SiDocker />}
         />
         <Card
-          title="UX Design"
-          des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta
-          hic consequuntur eum repellendus ad."
-          icon={<SiAntdesign />}
+          title="Database Management"
+          des="Expert in designing, implementing, and managing robust database systems using SQL, MySQL, PostgreSQL, SQL Server, and MongoDB to optimize data storage and retrieval."
+          icon={<FaDatabase />}
         />
         <Card
-          title="Hosting Websites"
-          des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta
-          hic consequuntur eum repellendus ad."
-          icon={<FaGlobe />}
+          title="Data Analysis"
+          des="Transforming raw data into meaningful insights using advanced analytical techniques. Skilled in creating interactive dashboards with Power BI to support data-driven decision-making."
+          icon={<SiPowerbi />}
+        />
+        <Card
+          title="Business Strategy"
+          des="Leveraging comprehensive market insights and strategic planning to drive business growth and innovation, ensuring sustainable competitive advantage."
+          icon={<FaBusinessTime />}
         />
       </div>
     </section>
   );
-}
+};
 
-export default Features
+export default Features;
