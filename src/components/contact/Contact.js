@@ -1,6 +1,7 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react';
 import Title from '../layouts/Title';
 import ContactLeft from './ContactLeft';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [username, setUsername] = useState("");
@@ -11,13 +12,10 @@ const Contact = () => {
   const [errMsg, setErrMsg] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
 
-  // ========== Email Validation start here ==============
   const emailValidation = () => {
     return String(email)
       .toLocaleLowerCase()
-      .match(/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/);
   };
-  // ========== Email Validation end here ================
 
   const handleSend = (e) => {
     e.preventDefault();
@@ -34,24 +32,43 @@ const Contact = () => {
     } else if (message === "") {
       setErrMsg("Message is required!");
     } else {
-      setSuccessMsg(
-        `Thank you dear ${username}, Your Messages has been sent Successfully!`
-      );
-      setErrMsg("");
-      setUsername("");
-      setPhoneNumber("");
-      setEmail("");
-      setSubject("");
-      setMessage("");
+      emailjs.send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: username,
+          from_email: email,
+          to_name: 'malufln.99@gmail.com', 
+          phone: phoneNumber,
+          subject: subject,
+          message: message,
+        },
+        process.env.REACT_APP_EMAILJS_USER_ID
+      ).then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        setSuccessMsg(
+          `Thank you dear ${username}, Your Messages has been sent Successfully!`
+        );
+        setErrMsg("");
+        setUsername("");
+        setPhoneNumber("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
+      }, (err) => {
+        console.log('FAILED...', err);
+        setErrMsg("Failed to send message. Please try again later.");
+      });
     }
   };
+
   return (
     <section
       id="contact"
       className="w-full py-20 border-b-[1px] border-b-black"
     >
       <div className="flex justify-center items-center text-center">
-        <Title title="CONTACT" des="Contact With Me" />
+        <Title title="CONTACT" des="Contact Me" />
       </div>
       <div className="w-full">
         <div className="w-full h-auto flex flex-col lgl:flex-row justify-between">
@@ -166,4 +183,4 @@ const Contact = () => {
   );
 }
 
-export default Contact
+export default Contact;
