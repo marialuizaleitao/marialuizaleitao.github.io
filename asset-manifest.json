@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/marialuizaleitao/marialuizaleitao.github.io/static/css/main.6f67d8f5.css",
-    "main.js": "/marialuizaleitao/marialuizaleitao.github.io/static/js/main.6ffc6da3.js",
+    "main.css": "/marialuizaleitao/marialuizaleitao.github.io/static/css/main.89273fca.css",
+    "main.js": "/marialuizaleitao/marialuizaleitao.github.io/static/js/main.6b4362dd.js",
     "static/media/projectTwo.jpg": "/marialuizaleitao/marialuizaleitao.github.io/static/media/projectTwo.a4415d5dd007515a193a.jpg",
     "static/media/projectSix.jpg": "/marialuizaleitao/marialuizaleitao.github.io/static/media/projectSix.e950f28a7218a5d13a75.jpg",
     "static/media/contactImg.png": "/marialuizaleitao/marialuizaleitao.github.io/static/media/contactImg.8ddfbfd11798f881db54.png",
     "static/media/projectThree.jpg": "/marialuizaleitao/marialuizaleitao.github.io/static/media/projectThree.2368e2de12a7e2762419.jpg",
     "static/media/projectFour.jpg": "/marialuizaleitao/marialuizaleitao.github.io/static/media/projectFour.88e148b574411dc0008a.jpg",
     "index.html": "/marialuizaleitao/marialuizaleitao.github.io/index.html",
-    "main.6f67d8f5.css.map": "/marialuizaleitao/marialuizaleitao.github.io/static/css/main.6f67d8f5.css.map",
-    "main.6ffc6da3.js.map": "/marialuizaleitao/marialuizaleitao.github.io/static/js/main.6ffc6da3.js.map"
+    "main.89273fca.css.map": "/marialuizaleitao/marialuizaleitao.github.io/static/css/main.89273fca.css.map",
+    "main.6b4362dd.js.map": "/marialuizaleitao/marialuizaleitao.github.io/static/js/main.6b4362dd.js.map"
   },
   "entrypoints": [
-    "static/css/main.6f67d8f5.css",
-    "static/js/main.6ffc6da3.js"
+    "static/css/main.89273fca.css",
+    "static/js/main.6b4362dd.js"
   ]
 }
