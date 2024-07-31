@@ -54,7 +54,7 @@ const Projects = () => {
           githubLink="https://github.com/marialuizaleitao/WalmartSalesAnalysis"
         />
         <ProjectsCard
-          title="CATAGORICAL ENCODING"
+          title="CATEGORICAL ENCODING"
           des="A Data Science project in SQL applying advanced techniques such as Categorization, Label Encoding, One-Hot Encoding, and Data Binarization for the analysis of a breast cancer database."
           src={projectSix}
           githubLink="https://github.com/marialuizaleitao/CategoricalEncodingSQL"
